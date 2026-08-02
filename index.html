@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Our Celebration Together</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="starfield"></div>
+    <div class="cloud cloud-one"></div>
+    <div class="cloud cloud-two"></div>
+    <div class="hearts-layer"></div>
+    <div class="petals-layer"></div>
+    <div class="sparkle-cursor"></div>
+
+    <div class="loading-screen" id="loadingScreen">
+      <div class="loading-card glass">
+        <h1 class="typewriter" data-text="Loading our sweetest memories..."></h1>
+        <div class="loader-ring"></div>
+      </div>
+    </div>
+
+    <div class="password-screen" id="passwordScreen">
+      <div class="password-card glass">
+        <p class="eyebrow">Our Love Story</p>
+        <h1>Enter Password to Reveal Our Long Lasting and Loving Story</h1>
+        <div class="digit-inputs">
+          <input class="digit-box" id="digit-1" type="text" inputmode="numeric" maxlength="1" />
+          <input class="digit-box" id="digit-2" type="text" inputmode="numeric" maxlength="1" />
+          <input class="digit-box" id="digit-3" type="text" inputmode="numeric" maxlength="1" />
+          <input class="digit-box" id="digit-4" type="text" inputmode="numeric" maxlength="1" />
+          <input class="digit-box" id="digit-5" type="text" inputmode="numeric" maxlength="1" />
+          <input class="digit-box" id="digit-6" type="text" inputmode="numeric" maxlength="1" />
+        </div>
+        <button id="enterBtn" class="cute-confirm-btn">💗 CONFIRM</button>
+        <p id="passwordMessage" class="message"></p>
+      </div>
+    </div>
+
+    <div class="music-control">
+      <button id="musicToggle" class="music-btn" aria-label="Play music">🎵</button>
+      <input id="volumeControl" class="volume-control" type="range" min="0" max="100" value="60" aria-label="Volume control" />
+    </div>
+    <audio id="musicAudio" src="./song.mp3" loop preload="auto"></audio>
+    <audio id="buttonSound" src="./Button_click.wav" preload="auto"></audio>
+
+    <div class="app-shell hidden" id="appShell">
+      <header class="topbar glass">
+        <div class="brand">
+          <span>❤️</span>
+          <strong>Forever Us</strong>
+        </div>
+        <label class="picker-wrap">
+          <span>Background</span>
+          <select id="backgroundPicker" class="background-picker">
+            <option value="Default">Default</option>
+            <option value="YourWP">Your PC Wallpaper</option>
+            <option value="MyWP">My Wallpaper</option>
+          </select>
+        </label>
+        <button id="themeToggle" class="toggle-btn">🌙 Dark</button>
+      </header>
+
+      <nav class="nav-pill glass">
+        <a href="#home">Home</a>
+        <a href="#story">Our Story</a>
+        <a href="#reasons" class="locked-link hidden">Reasons</a>
+        <a href="#gallery" class="locked-link hidden">Gallery</a>
+        <a href="#timeline" class="locked-link hidden">Timeline</a>
+        <a href="#letters" class="locked-link hidden">Letters</a>
+        <a href="#game" class="locked-link hidden">Game</a>
+        <a href="#countdown" class="locked-link hidden">Countdown</a>
+        <a href="#surprises">Surprises</a>
+        <a href="#final" class="locked-link hidden">Final Surprise</a>
+      </nav>
+
+      <main>
+        <section id="home" class="panel hero">
+          <div class="hero-card glass reveal">
+            <p class="eyebrow">Our anniversary / Your Birthday</p>
+            <h1 class="typewriter" data-text="A little world made for us."></h1>
+            <p>
+              Every part holds a memory, a promise, and a reason to fall in love with you again.
+            </p>
+            <div class="actions">
+              <a href="#story" class="btn">Begin the Story</a>
+              <button class="btn secondary" id="confettiBtn">Celebrate</button>
+            </div>
+          </div>
+        </section>
+
+        <section id="story" class="panel">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Part 1</p>
+            <h2>Our Story</h2>
+          </div>
+          <div class="story-grid reveal">
+            <article class="glass card">
+              <h3>How we met</h3>
+              <p>We met online in a game called Fisch, a game in Roblox. We started as silly jokes, small chats, doing silly things and fishing to finish our bestiaries. Now it has ended up to us loving each other day by day.</p>
+            </article>
+            <article class="glass card">
+              <h3>What we built</h3>
+              <p>We built our world with happiness, comfort, laughter, fun and everlasting love. We cry, fight. misunderstood but despite that. We overcome that by talking to each other and comforting each other every time something went wrong.</p>
+            </article>
+            <article class="glass card">
+              <h3>What we are</h3>
+              <p>Two lovers learning, growing, and loving each other every day.</p>
+            </article>
+          </div>
+        </section>
+
+        <section id="unlock-countdown" class="panel">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Coming Soon</p>
+            <h2>The Rest Unlocks on November 13</h2>
+          </div>
+          <div class="countdown-grid reveal">
+            <article class="glass card"><span id="unlockDays">0</span><small>Days</small></article>
+            <article class="glass card"><span id="unlockHours">0</span><small>Hours</small></article>
+            <article class="glass card"><span id="unlockMinutes">0</span><small>Minutes</small></article>
+            <article class="glass card"><span id="unlockSeconds">0</span><small>Seconds</small></article>
+          </div>
+          <p class="countdown-text">Everything from here on out unlocks on November 13. Come back then!</p>
+          <div class="early-access glass">
+            <label for="earlyAccessInput">Know the early access code?</label>
+            <div class="early-access-row">
+              <input type="password" id="earlyAccessInput" placeholder="Enter code" autocomplete="off" />
+              <button id="earlyAccessBtn" class="btn secondary">Unlock Now</button>
+            </div>
+            <p id="earlyAccessMessage" class="message"></p>
+          </div>
+        </section>
+
+        <section id="reasons" class="panel locked-section hidden">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Part 2</p>
+            <h2>100 Reasons I Love You</h2>
+          </div>
+          <div class="reasons-grid" id="reasonsGrid"></div>
+        </section>
+
+        <section id="gallery" class="panel locked-section hidden">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Part 3</p>
+            <h2>Gallery</h2>
+          </div>
+          <div class="gallery-grid reveal">
+            <figure class="polaroid glass">
+              <img src="1st convo.jpeg" alt="Our first conversation" />
+              <figcaption>Our first conversation</figcaption>
+            </figure>
+            <figure class="polaroid glass">
+              <img src="better qual first vm.jpeg" alt="Our first VM exchange" />
+              <figcaption>Our first VM exchange</figcaption>
+            </figure>
+            <figure class="polaroid glass">
+              <img src="first ily.jpeg" alt="Our first name calling" />
+              <figcaption>Our first name calling</figcaption>
+            </figure>
+            <figure class="polaroid glass">
+              <img src="first pijjure of us.jpeg" alt="First picture sent to each other" />
+              <figcaption>First picture sent to each other</figcaption>
+            </figure>
+            <figure class="polaroid glass">
+              <img src="First photo f2f.jpeg" alt="Our first face to face meeting each other" />
+              <figcaption>Our first face to face meeting each other</figcaption>
+          </div>
+        </section>
+
+        <section id="timeline" class="panel locked-section hidden">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Part 4</p>
+            <h2>Timeline</h2>
+          </div>
+          <div class="timeline reveal">
+            <div class="timeline-item glass"><span>May 7, 2025</span><p>Our anniversary began.</p></div>
+            <div class="timeline-item glass"><span>Nov 13, 2005</span><p>Your Birthday.</p></div>
+            <div class="timeline-item glass"><span>Aug 30, 2006</span><p>My Birthday.</p></div>
+            <div class="timeline-item glass"><span>Forever</span><p>The story keeps growing with every smile.</p></div>
+          </div>
+        </section>
+
+        <section id="letters" class="panel locked-section hidden">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Part 5</p>
+            <h2>Open When...</h2>
+          </div>
+          <div class="letters-grid reveal">
+            <button class="letter-card glass" data-title="Open When You Miss Me" data-message="Whenever you miss me, remember that I am always with you in every quiet moment and every memory.">Open When You Miss Me</button>
+            <button class="letter-card glass" data-title="Open When You Need Comfort" data-message="You do not have to carry anything alone. I am here, and my love will still and always be yours.">Open When You Need Comfort</button>
+            <button class="letter-card glass" data-title="Open When You Need Courage" data-message="You are braver than you know, and I will always be the soft place to land.">Open When You Need Courage</button>
+          </div>
+        </section>
+
+        <section id="game" class="panel locked-section hidden">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Part 6</p>
+            <h2>Memory Game</h2>
+          </div>
+          <div class="memory-game reveal">
+            <div class="game-board" id="gameBoard"></div>
+            <p id="gameStatus">Find all matching emojis.</p>
+          </div>
+        </section>
+
+        <section id="countdown" class="panel locked-section hidden">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Part 7</p>
+            <h2>Countdown to Forever</h2>
+          </div>
+          <div class="countdown-grid reveal">
+            <article class="glass card"><span id="years">0</span><small>Years</small></article>
+            <article class="glass card"><span id="months">0</span><small>Months</small></article>
+            <article class="glass card"><span id="days">0</span><small>Days</small></article>
+            <article class="glass card"><span id="hours">0</span><small>Hours</small></article>
+            <article class="glass card"><span id="minutes">0</span><small>Minutes</small></article>
+            <article class="glass card"><span id="seconds">0</span><small>Seconds</small></article>
+          </div>
+          <p id="countdownText" class="countdown-text"></p>
+        </section>
+
+        <!--
+        <p> This will be a hidden section for surprises </p>
+        <section id="surprises" class="panel">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Part 8</p>
+            <h2>Hidden Surprises</h2>
+          </div>
+          <div class="surprise-scene reveal">
+            <div class="surprise-hunt" id="surpriseHunt" aria-label="Hidden surprise emojis"></div>
+            <p id="easterMessage" class="message"></p>
+          </div>
+        </section>
+        -->
+
+        <section id="final" class="panel final-panel locked-section hidden">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Final</p>
+            <h2>Final Surprise</h2>
+          </div>
+          <div class="final-card glass reveal">
+            <h3>For my favorite person</h3>
+            <p>
+              Thank you for being the softest place in my world and the brightest star in my sky.
+              Every heartbeat since May 7, 2025 has felt kinder with you in it. 131126
+            </p>
+            <button id="finalHeartBtn" class="btn">Open the sweetest message</button>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <div class="lightbox hidden" id="lightbox">
+      <button id="closeLightbox" class="close-btn">×</button>
+      <img id="lightboxImage" src="" alt="Expanded memory" />
+    </div>
+
+    <div class="letter-modal hidden" id="letterModal">
+      <div class="letter-content glass">
+        <button id="closeLetter" class="close-btn">×</button>
+        <h3 id="letterTitle"></h3>
+        <p id="letterText"></p>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
