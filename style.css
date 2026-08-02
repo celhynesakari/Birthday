@@ -148,10 +148,10 @@ main { width: min(1100px, calc(100% - 2rem)); margin: 0 auto; padding-bottom: 4r
   font-size: 0.9rem;
 }
 .background-picker {
-  border: 1px solid rgba(255,255,255,0.55);
+  border: 1px solid rgba(255,255,255,0.35);
   border-radius: 999px;
   padding: 0.45rem 0.75rem;
-  background: rgba(255,255,255,0.55);
+  background: var(--glass);
   color: var(--text);
 }
 .toggle-btn, .btn, .letter-card, .surprise-btn {
@@ -162,7 +162,7 @@ main { width: min(1100px, calc(100% - 2rem)); margin: 0 auto; padding-bottom: 4r
   color: white;
   background: linear-gradient(135deg, var(--rose), var(--rose-deep));
 }
-.toggle-btn { background: rgba(255,255,255,0.5); color: var(--text); }
+.toggle-btn { background: var(--glass); color: var(--text); }
 .cute-confirm-btn {
   margin-top: 0.5rem;
   font-weight: 900;
@@ -212,8 +212,9 @@ main { width: min(1100px, calc(100% - 2rem)); margin: 0 auto; padding-bottom: 4r
 .reason-chip {
   padding: 0.7rem;
   border-radius: 18px;
-  background: rgba(255,255,255,0.4);
-  border: 1px solid rgba(255,255,255,0.4);
+  background: var(--glass);
+  border: 1px solid rgba(255,255,255,0.28);
+  color: var(--text);
 }
 .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; }
 .polaroid { padding: 0.9rem; border-radius: 16px; transform: rotate(var(--tilt)); }
@@ -271,7 +272,7 @@ letters-grid, .surprise-grid { grid-template-columns: repeat(auto-fit, minmax(22
   border: none;
   border-radius: 18px;
   font-size: 2rem;
-  background: rgba(255,255,255,0.45);
+  background: var(--glass);
   color: var(--text);
   cursor: pointer;
   transition: transform 0.25s ease;
