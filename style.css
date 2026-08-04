@@ -113,6 +113,7 @@ main { width: min(1100px, calc(100% - 2rem)); margin: 0 auto; padding-bottom: 4r
   top: 1rem;
   right: 1rem;
   z-index: 60;
+  padding-bottom: 3.5rem;
 }
 .music-btn {
   width: 44px;
@@ -133,13 +134,16 @@ main { width: min(1100px, calc(100% - 2rem)); margin: 0 auto; padding-bottom: 4r
   opacity: 0;
   pointer-events: none;
   transform: translateY(-6px);
-  transition: opacity 0.25s ease, transform 0.25s ease;
+  transition: opacity 0.2s ease 0.35s, transform 0.2s ease 0.35s, visibility 0s 0.55s;
+  visibility: hidden;
 }
 .music-control:hover .volume-control,
 .music-control:focus-within .volume-control {
   opacity: 1;
   pointer-events: auto;
   transform: translateY(0);
+  visibility: visible;
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0s;
 }
 .picker-wrap {
   display: flex;
