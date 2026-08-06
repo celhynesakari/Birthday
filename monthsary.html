@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Monthsary ❤️</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="starfield"></div>
+<div class="cloud cloud-one"></div>
+<div class="cloud cloud-two"></div>
+<div class="hearts-layer"></div>
+<div class="petals-layer"></div>
+
+<header class="topbar glass">
+    <div class="brand">
+        ❤️ <strong>Happy Monthsary</strong>
+    </div>
+
+    <a href="index.html" class="btn">
+        ⬅ Back
+    </a>
+</header>
+
+<main>
+
+<section class="panel hero">
+    <div class="hero-card glass reveal">
+
+        <p class="eyebrow">
+            Every month with you is a blessing
+        </p>
+
+        <h1>
+            Happy Monthsary, My Love ❤️
+        </h1>
+
+        <p>
+            Another month has passed, but my love for you only continues to grow.
+            Thank you for every smile, every laugh, every late-night conversation,
+            and every moment we've shared together.
+        </p>
+
+    </div>
+</section>
+
+<section class="panel">
+
+    <div class="section-heading">
+        <h2>A Letter For You 💌</h2>
+    </div>
+
+    <div class="glass card">
+
+        <p>
+
+Happy anniversary, lab. You're the best girlfriend I could ever have.
+
+Thank you for another wonderful month of love, laughter, and memories together.
+Every day with you is a blessing, and I'm so grateful to have someone as kind,
+caring, and amazing as you by my side.
+
+Thank you for loving me even on my difficult days.
+I promise to keep choosing you, supporting you,
+and loving you with all my heart.
+
+Happy monthsary, my love.
+
+I love you so much. ❤️
+
+        </p>
+
+    </div>
+
+</section>
+
+<section class="panel">
+
+    <div class="section-heading">
+        <h2>I Love You Because...</h2>
+    </div>
+
+    <div class="reasons-grid">
+
+        <div class="reason-chip glass">❤️ You always make me smile.</div>
+
+        <div class="reason-chip glass">🌸 You make my days brighter.</div>
+
+        <div class="reason-chip glass">💗 You understand me.</div>
+
+        <div class="reason-chip glass">🥺 You're my safe place.</div>
+
+        <div class="reason-chip glass">💕 You make me feel loved.</div>
+
+        <div class="reason-chip glass">🌹 You never give up on us.</div>
+
+    </div>
+
+</section>
+
+<section class="panel final-panel">
+
+    <div class="final-card glass">
+
+        <h2>Forever & Always ❤️</h2>
+
+        <p>
+            No matter how many months pass,
+            I will always choose you.
+        </p>
+
+        <button class="btn" onclick="createHearts()">
+            💖 I Love You
+        </button>
+
+    </div>
+
+</section>
+
+</main>
+
+<script>
+
+function createHearts(){
+
+    for(let i=0;i<25;i++){
+
+        const heart=document.createElement("div");
+
+        heart.innerHTML="💖";
+
+        heart.style.position="fixed";
+        heart.style.left=Math.random()*100+"vw";
+        heart.style.top="100vh";
+        heart.style.fontSize=(20+Math.random()*20)+"px";
+        heart.style.transition="all 3s linear";
+        heart.style.pointerEvents="none";
+
+        document.body.appendChild(heart);
+
+        setTimeout(()=>{
+            heart.style.top="-10vh";
+            heart.style.opacity="0";
+        },50);
+
+        setTimeout(()=>{
+            heart.remove();
+        },3000);
+
+    }
+
+}
+
+</script>
+
+</body>
+</html>
