@@ -113,7 +113,6 @@ main { width: min(1100px, calc(100% - 2rem)); margin: 0 auto; padding-bottom: 4r
   top: 1rem;
   right: 1rem;
   z-index: 60;
-  padding-bottom: 3.5rem;
 }
 .music-btn {
   width: 44px;
@@ -134,16 +133,13 @@ main { width: min(1100px, calc(100% - 2rem)); margin: 0 auto; padding-bottom: 4r
   opacity: 0;
   pointer-events: none;
   transform: translateY(-6px);
-  transition: opacity 0.2s ease 0.35s, transform 0.2s ease 0.35s, visibility 0s 0.55s;
-  visibility: hidden;
+  transition: opacity 0.25s ease, transform 0.25s ease;
 }
 .music-control:hover .volume-control,
 .music-control:focus-within .volume-control {
   opacity: 1;
   pointer-events: auto;
   transform: translateY(0);
-  visibility: visible;
-  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0s;
 }
 .picker-wrap {
   display: flex;
@@ -152,10 +148,10 @@ main { width: min(1100px, calc(100% - 2rem)); margin: 0 auto; padding-bottom: 4r
   font-size: 0.9rem;
 }
 .background-picker {
-  border: 1px solid rgba(255,255,255,0.35);
+  border: 1px solid rgba(255,255,255,0.55);
   border-radius: 999px;
   padding: 0.45rem 0.75rem;
-  background: var(--glass);
+  background: rgba(255,255,255,0.55);
   color: var(--text);
 }
 .toggle-btn, .btn, .letter-card, .surprise-btn {
@@ -166,7 +162,7 @@ main { width: min(1100px, calc(100% - 2rem)); margin: 0 auto; padding-bottom: 4r
   color: white;
   background: linear-gradient(135deg, var(--rose), var(--rose-deep));
 }
-.toggle-btn { background: var(--glass); color: var(--text); }
+.toggle-btn { background: rgba(255,255,255,0.5); color: var(--text); }
 .cute-confirm-btn {
   margin-top: 0.5rem;
   font-weight: 900;
@@ -216,9 +212,8 @@ main { width: min(1100px, calc(100% - 2rem)); margin: 0 auto; padding-bottom: 4r
 .reason-chip {
   padding: 0.7rem;
   border-radius: 18px;
-  background: var(--glass);
-  border: 1px solid rgba(255,255,255,0.28);
-  color: var(--text);
+  background: rgba(255,255,255,0.4);
+  border: 1px solid rgba(255,255,255,0.4);
 }
 .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; }
 .polaroid { padding: 0.9rem; border-radius: 16px; transform: rotate(var(--tilt)); }
@@ -276,7 +271,7 @@ letters-grid, .surprise-grid { grid-template-columns: repeat(auto-fit, minmax(22
   border: none;
   border-radius: 18px;
   font-size: 2rem;
-  background: var(--glass);
+  background: rgba(255,255,255,0.45);
   color: var(--text);
   cursor: pointer;
   transition: transform 0.25s ease;
@@ -396,4 +391,40 @@ a, button, input, select, .letter-card, .memory-card, .polaroid img { cursor: no
   .topbar { border-radius: 20px; flex-wrap: wrap; justify-content: center; }
   .nav-pill { border-radius: 16px; }
   .typewriter { white-space: normal; }
+}
+.divider {
+    display: flex;
+    align-items: center;
+    margin: 18px 0;
+    color: #b45a7b;
+    font-weight: 600;
+}
+
+.divider::before,
+.divider::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: rgba(255,255,255,.6);
+}
+
+.divider span {
+    margin: 0 12px;
+}
+
+.monthsary-btn {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    padding: 14px;
+    border-radius: 999px;
+    background: linear-gradient(135deg, #ff9fc4, #ff6ca8);
+    color: white;
+    font-weight: bold;
+    transition: 0.25s;
+}
+
+.monthsary-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(255,105,180,.3);
 }
